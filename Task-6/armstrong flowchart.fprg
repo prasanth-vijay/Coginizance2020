@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PRASANTH VIJAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-14 07:28:59 PM"/>
+        <attribute name="created" value="UFJBU0FOVEggVklKQVk7TEFQVE9QLVBWNDZPUkRQOzIwMjAtMTEtMTk7MDI6Mjg6MTcgUE07MzM5OA=="/>
+        <attribute name="edited" value="UFJBU0FOVEggVklKQVk7TEFQVE9QLVBWNDZPUkRQOzIwMjAtMTItMTQ7MDc6Mjg6NTkgUE07NDszNTE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, original, sum, r, result, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="result" expression="0"/>
+            <if expression="num&lt;1000">
+                <then>
+                    <assign variable="temp" expression="num"/>
+                    <while expression="temp != 0">
+                        <assign variable="r" expression="temp%10"/>
+                        <assign variable="result" expression="result + r*r*r"/>
+                        <assign variable="temp" expression="temp / 10"/>
+                    </while>
+                    <if expression="result==num">
+                        <then>
+                            <output expression="&quot;it is an armstrong number&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;it is not an armstrong number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="temp" expression="num"/>
+                    <while expression="temp != 0">
+                        <assign variable="r" expression="temp%10"/>
+                        <assign variable="result" expression="result + r*r*r*r"/>
+                        <assign variable="temp" expression="temp / 10"/>
+                    </while>
+                    <if expression="result==num">
+                        <then>
+                            <output expression="&quot;it is an armstrong number&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;it is not an armstrong number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
